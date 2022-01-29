@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.7.1 on win32)" generated="20220129 18:11:30.883" rpa="false" schemaversion="2">
+<suite id="s1" name="Main" source="C:\developpement\RobotFrameworkPycharm\Tests\main.robot">
+<kw name="Begin Web Test" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220129 18:11:35.566" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220129 18:11:35.565" endtime="20220129 18:11:40.093"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220129 18:11:40.094" endtime="20220129 18:11:40.245"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:35.564" endtime="20220129 18:11:40.246"/>
+</kw>
+<test id="s1-t1" name="Voir Produits Disponibles">
+<kw name="Charger La Page Web" library="PageAccueil">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GOOGLE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220129 18:11:40.252" level="INFO">Opening url 'https://www.google.fr/'</msg>
+<status status="PASS" starttime="20220129 18:11:40.251" endtime="20220129 18:11:41.466"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220129 18:11:41.466" endtime="20220129 18:11:41.506"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:40.250" endtime="20220129 18:11:41.506"/>
+</kw>
+<kw name="Chercher Sur Site Web" library="PageAccueil">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="L2AGLb"]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220129 18:11:41.510" level="INFO">Clicking element 'xpath=//*[@id="L2AGLb"]/div'.</msg>
+<status status="PASS" starttime="20220129 18:11:41.509" endtime="20220129 18:11:41.644"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220129 18:11:41.645" endtime="20220129 18:11:41.730"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>amazon</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220129 18:11:41.731" level="INFO">Typing text 'amazon' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20220129 18:11:41.730" endtime="20220129 18:11:41.860"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220129 18:11:41.861" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220129 18:11:41.860" endtime="20220129 18:11:45.355"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Images</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220129 18:11:45.356" endtime="20220129 18:11:45.400"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:41.508" endtime="20220129 18:11:45.400"/>
+</kw>
+<kw name="Naviguer Vers Site Amazon" library="PageAccueil">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220129 18:11:45.403" level="INFO">Clicking element 'xpath=//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3'.</msg>
+<status status="PASS" starttime="20220129 18:11:45.403" endtime="20220129 18:11:49.688"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Commandes</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220129 18:11:49.688" endtime="20220129 18:11:50.066"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:45.402" endtime="20220129 18:11:50.066"/>
+</kw>
+<kw name="Rechercher la produit" library="PageAccueil">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="twotabsearchtextbox"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220129 18:11:50.072" endtime="20220129 18:11:50.305"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="twotabsearchtextbox"]</arg>
+<arg>ordinateur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220129 18:11:50.306" level="INFO">Typing text 'ordinateur' into text field 'xpath=//*[@id="twotabsearchtextbox"]'.</msg>
+<status status="PASS" starttime="20220129 18:11:50.305" endtime="20220129 18:11:50.656"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>ordinateur</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220129 18:11:50.656" endtime="20220129 18:11:50.756"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:50.071" endtime="20220129 18:11:50.757"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:40.246" endtime="20220129 18:11:50.757"/>
+</test>
+<kw name="End Web Test" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220129 18:11:50.764" endtime="20220129 18:11:59.442"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:50.763" endtime="20220129 18:11:59.442"/>
+</kw>
+<status status="PASS" starttime="20220129 18:11:30.887" endtime="20220129 18:11:59.443"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
