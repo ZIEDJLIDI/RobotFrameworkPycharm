@@ -1,1 +1,1 @@
-##  buy a computer on Amazon 
+ 
